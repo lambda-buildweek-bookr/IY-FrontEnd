@@ -4,7 +4,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
-import logowhite from "./logowhite.png";
+import logowhite from "../../design/logowhite.png";
 
 function NavBar() {
   return (

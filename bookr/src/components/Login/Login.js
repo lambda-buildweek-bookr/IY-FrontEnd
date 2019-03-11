@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import logo from "./logo.png";
+import logo from "../../design/logo.png";
 
 class Login extends React.Component {
   state = {
@@ -47,7 +47,12 @@ class Login extends React.Component {
           margin="normal"
           name="password"
         />
-        <Button color="primary" type="submit" variant="contained">
+        <Button
+          onClick={ev => this.props.history.push("/")}
+          color="primary"
+          type="submit"
+          variant="contained"
+        >
           Login
         </Button>
       </form>

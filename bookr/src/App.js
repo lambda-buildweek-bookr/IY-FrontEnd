@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import NavBar from "./components/NavBar";
-import BookList from "./components/BookList";
+import NavBar from "./components/NavigationBar/NavBar";
+import BookList from "./components/BooksContainer/BookList";
 import { Route } from "react-router-dom";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 import "./App.css";
 import axios from "axios";
 
@@ -15,14 +15,12 @@ class App extends Component {
   }
   componentDidMount() {
     axios
-      .get(
-        "https://www.googleapis.com/books/v1/volumes?q=flowers&projection=lite&key=AIzaSyBaR3rS4nSkQ0XAQ1MCX05KHEk7yJ6ZIeg"
-      )
+      .get("https://bookr-buildweek-backend.herokuapp.com/api/books")
 
       .then(res => {
-        console.log(res.data.items);
+        console.log(res.data);
         this.setState({
-          books: res.data.items
+          books: res.data
         });
       })
       .catch(err => {
