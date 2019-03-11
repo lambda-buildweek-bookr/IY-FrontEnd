@@ -47,7 +47,12 @@ class Login extends React.Component {
           margin="normal"
           name="password"
         />
-        <Button color="primary" type="submit" variant="contained">
+        <Button
+          onClick={ev => this.props.history.push("/")}
+          color="primary"
+          type="submit"
+          variant="contained"
+        >
           Login
         </Button>
       </form>
