@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import NavBar from "./components/NavBar";
-import BookList from "./components/BookList";
+import NavBar from "./components/NavigationBar/NavBar";
+import BookList from "./components/BooksContainer/BookList";
 import { Route } from "react-router-dom";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 import "./App.css";
 import axios from "axios";
 
