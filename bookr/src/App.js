@@ -15,14 +15,12 @@ class App extends Component {
   }
   componentDidMount() {
     axios
-      .get(
-        "https://www.googleapis.com/books/v1/volumes?q=flowers&projection=lite&key=AIzaSyBaR3rS4nSkQ0XAQ1MCX05KHEk7yJ6ZIeg"
-      )
+      .get("https://bookr-buildweek-backend.herokuapp.com/api/books")
 
       .then(res => {
-        console.log(res.data.items);
+        console.log(res.data);
         this.setState({
-          books: res.data.items
+          books: res.data
         });
       })
       .catch(err => {

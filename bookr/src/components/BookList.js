@@ -12,10 +12,10 @@ class BookList extends Component {
         {this.props.books.map(book => (
           <Book
             key={book.id}
-            title={book.volumeInfo.title}
-            author={book.volumeInfo.authors}
-            snippet={book.searchInfo.textSnippet}
-            image={book.volumeInfo.imageLinks.smallThumbnail}
+            title={book.title}
+            author={book.author}
+            snippet={book.brief_desc}
+            image={book.image_url}
           />
         ))}
       </div>

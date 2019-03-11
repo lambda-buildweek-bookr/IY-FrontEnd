@@ -14,6 +14,11 @@
 
 .card {
   width: 250px;
+  height: 425px;
   border: 1px solid #636c75;
   margin: 5% 0;
+}
+.card-img {
+  height: 150px;
+  width: 100%;
 }
